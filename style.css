@@ -427,3 +427,9 @@ nav .fas{
     margin-top: -40px;
     display: block;
 }
+/* Blur effect for form */
+.blurred {
+    filter: blur(4px);
+    pointer-events: none; /* Disable inputs while blurred */
+    opacity: 0.6; /* Optional: slightly fade it */
+}
