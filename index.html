@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sahil Sreedharan</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+      /* Add blur style for form on submit */
+      form.blurred {
+        filter: blur(4px);
+        pointer-events: none;
+        opacity: 0.6;
+        transition: filter 0.3s, opacity 0.3s;
+      }
+    </style>
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -25,8 +34,8 @@
         </nav>
         <div class="header-text">
             <p>Data Analytics Specialist</p>
-            <h1>Hi, I'm <span>Sahil</span> </h1>
-            <h2>From God's own country <span>Kerala</span> </h2>
+            <h1>Hi, I'm <span>Sahil</span></h1>
+            <h2>From God's own country <span>Kerala</span></h2>
         </div>
     </div>
 </div>
@@ -38,20 +47,17 @@
                 <img src="images\AboutSahil_Old.jpg">
                 <img src="images\AboutSahil.png">
                 <img src="images\AboutSahil_Cricket.jpg">
-                
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
                 <p>
-                    <h3>Certified Data Analytics Proffesional</h3>
+                    <h3>Certified Data Analytics Professional</h3>
                     <div class="section">
                         <p>Transitioned from a career in cricket to excel in the world of data.</p>
                         <p>Focused on providing expert Data Analytics Consulting services, with additional expertise in Sports Management and Analytics, particularly within the realm of Cricket.</p>
                     </div>
-                    
                     <div class="section">
                         <h3>Expertise in:</h3>
-
                         <ul>
                             <li>Data Visualization using Power BI.</li>
                             <li>Data ETL and Wrangling using SQL, Power Query, and Python.</li>
@@ -62,7 +68,6 @@
                             <li>Application Development using Power Apps.</li>
                         </ul>
                     </div>
-                
                     <div class="section">
                         <h3>Knowledge in:</h3>
                         <ul>
@@ -78,159 +83,150 @@
                         </ul>
                     </div>
                 </p>
-
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
                     <p class="tab-links" onclick="opentab('education')">Education</p>
                 </div>
-<!-- Skills -->
-            <div class="tab-contents active-tab" id="skills">
-                <ul>
-                    <li class="timeline-event">
-                      <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">Power BI</h3>
-                      <p>Delivering advanced data visualizations, interactive dashboards, and real-time insights to support decision-making.</p>
-                    </li>
-                    <li class="timeline-event">
-                      <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">Power Query</h3>
-                      <p>Streamlining data transformation and modeling with intuitive tools for seamless integration.</p>
-                    </li>
-                    <li class="timeline-event">
-                      <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">SQL</h3>
-                      <p>Transforming raw data into actionable insights through optimized querying and data manipulation.</p>
-                    </li>
-                    <li class="timeline-event">
-                      <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">Python</h3>
-                      <p>Enhancing data analysis, automation, and ETL processes using powerful libraries like Pandas and NumPy.</p>
-                    </li>
-                    <li class="timeline-event">
-                      <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">Azure Data Factory</h3>
-                      <p>Orchestrating scalable and automated workflows for seamless data movement and transformation.</p>
-                    </li>
-                    <li class="timeline-event">
-                      <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">Azure Synapse Analytics</h3>
-                      <p>Integrating data warehousing and big data analytics for enterprise-level solutions.</p>
-                    </li>
-                    <li class="timeline-event">
-                      <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">Microsoft Fabric</h3>
-                      <p>Creating unified analytics platforms by integrating Synapse, Lakehouse, and Power BI.</p>
-                    </li>
-                    <li class="timeline-event">
-                      <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">Power Automate</h3>
-                      <p>Automating workflows to improve operational efficiency and ensure smooth data integration.</p>
-                    </li>
-                    <li class="timeline-event">
-                      <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">Power Apps</h3>
-                      <p>Building custom applications that enhance productivity and support data-driven solutions.</p>
-                    </li>
-                    <li class="timeline-event">
-                      <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">Governance and Administration Tools</h3>
-                      <p>Ensuring data quality, compliance, and effective delivery through robust governance practices.</p>
-                    </li>
-                  </ul>
-                  
-            </div>
-<!-- Skills -->
-
-<!-- experience -->
+                <!-- Skills -->
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li class="timeline-event">
+                            <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">Power BI</h3>
+                            <p>Delivering advanced data visualizations, interactive dashboards, and real-time insights to support decision-making.</p>
+                        </li>
+                        <li class="timeline-event">
+                            <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">Power Query</h3>
+                            <p>Streamlining data transformation and modeling with intuitive tools for seamless integration.</p>
+                        </li>
+                        <li class="timeline-event">
+                            <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">SQL</h3>
+                            <p>Transforming raw data into actionable insights through optimized querying and data manipulation.</p>
+                        </li>
+                        <li class="timeline-event">
+                            <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">Python</h3>
+                            <p>Enhancing data analysis, automation, and ETL processes using powerful libraries like Pandas and NumPy.</p>
+                        </li>
+                        <li class="timeline-event">
+                            <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">Azure Data Factory</h3>
+                            <p>Orchestrating scalable and automated workflows for seamless data movement and transformation.</p>
+                        </li>
+                        <li class="timeline-event">
+                            <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">Azure Synapse Analytics</h3>
+                            <p>Integrating data warehousing and big data analytics for enterprise-level solutions.</p>
+                        </li>
+                        <li class="timeline-event">
+                            <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">Microsoft Fabric</h3>
+                            <p>Creating unified analytics platforms by integrating Synapse, Lakehouse, and Power BI.</p>
+                        </li>
+                        <li class="timeline-event">
+                            <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">Power Automate</h3>
+                            <p>Automating workflows to improve operational efficiency and ensure smooth data integration.</p>
+                        </li>
+                        <li class="timeline-event">
+                            <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">Power Apps</h3>
+                            <p>Building custom applications that enhance productivity and support data-driven solutions.</p>
+                        </li>
+                        <li class="timeline-event">
+                            <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">Governance and Administration Tools</h3>
+                            <p>Ensuring data quality, compliance, and effective delivery through robust governance practices.</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Skills -->
+                <!-- experience -->
                 <div class="tab-contents" id="experience">
                     <div class="timeline">
                         <div class="timeline-event">
-                          <h3>2024 - Present</h3>
-                          <p>
-                            <img src="images/VizlakeAnalyticsLogo.jpg" alt="Vizlake Analytics Logo" class="timeline-logo">
-                            <strong>Lead Business Intelligence Developer</strong> at Vizlake Analytics
-                          </p>
-                          <ul>
-                            <li>Responsible for designing, developing, and maintaining advanced BI solutions for clients across industries, including amusement parks, financial services, and manufacturing.</li>
-                            <li>Expertise in Power BI, SQL, Azure Data Factory, and Microsoft Fabric to deliver scalable analytics solutions.</li>
-                          </ul>
+                            <h3>2024 - Present</h3>
+                            <p>
+                                <img src="images/VizlakeAnalyticsLogo.jpg" alt="Vizlake Analytics Logo" class="timeline-logo">
+                                <strong>Lead Business Intelligence Developer</strong> at Vizlake Analytics
+                            </p>
+                            <ul>
+                                <li>Responsible for designing, developing, and maintaining advanced BI solutions for clients across industries, including amusement parks, financial services, and manufacturing.</li>
+                                <li>Expertise in Power BI, SQL, Azure Data Factory, and Microsoft Fabric to deliver scalable analytics solutions.</li>
+                            </ul>
                         </div>
-                    
                         <div class="timeline-event">
-                          <h3>2023 - 2024</h3>
-                          <p>
-                            <img src="images/VizlakeAnalyticsLogo.jpg" alt="Vizlake Analytics Logo" class="timeline-logo">
-                            <strong>Senior Business Intelligence Developer</strong> at Vizlake Analytics
-                          </p>
-                          <ul>
-                            <li>Developed interactive dashboards and reports using Power BI.</li>
-                            <li>Automated tasks using Python, Power Automate, and Excel VBA for efficient data handling.</li>
-                            <li>Designed and maintained data pipelines using Azure Data Factory and Synapse Analytics.</li>
-                          </ul>
+                            <h3>2023 - 2024</h3>
+                            <p>
+                                <img src="images/VizlakeAnalyticsLogo.jpg" alt="Vizlake Analytics Logo" class="timeline-logo">
+                                <strong>Senior Business Intelligence Developer</strong> at Vizlake Analytics
+                            </p>
+                            <ul>
+                                <li>Developed interactive dashboards and reports using Power BI.</li>
+                                <li>Automated tasks using Python, Power Automate, and Excel VBA for efficient data handling.</li>
+                                <li>Designed and maintained data pipelines using Azure Data Factory and Synapse Analytics.</li>
+                            </ul>
                         </div>
-                    
                         <div class="timeline-event">
-                          <h3>2021 - 2023</h3>
-                          <p>
-                            <img src="images/VizlakeAnalyticsLogo.jpg" alt="Vizlake Analytics Logo" class="timeline-logo">
-                            <strong>Business Intelligence Developer</strong> at Vizlake Analytics
-                          </p>
-                          <ul>
-                            <li>Assisted in creating reports and dashboards while gaining expertise in BI tools like Power BI and SQL.</li>
-                            <li>Learned data modeling and ETL processes under senior guidance.</li>
-                          </ul>
+                            <h3>2021 - 2023</h3>
+                            <p>
+                                <img src="images/VizlakeAnalyticsLogo.jpg" alt="Vizlake Analytics Logo" class="timeline-logo">
+                                <strong>Business Intelligence Developer</strong> at Vizlake Analytics
+                            </p>
+                            <ul>
+                                <li>Assisted in creating reports and dashboards while gaining expertise in BI tools like Power BI and SQL.</li>
+                                <li>Learned data modeling and ETL processes under senior guidance.</li>
+                            </ul>
                         </div>
-                    
                         <div class="timeline-event">
-                          <h3>2021</h3>
-                          <p>
-                            <img src="images/M2M.jpg" alt="MyMathews Educare Logo" class="timeline-logo">
-                            <strong>Data Analyst Intern</strong> at MyMathews Educare Pvt Ltd
-                          </p>
-                          <ul>
-                            <li>Prepared advanced dashboards and Excel reports (e.g., HR, Financial, Payroll).</li>
-                            <li>Automated spreadsheets using Excel VBA for improved data entry efficiency.</li>
-                            <li>Conducted statistical analysis to measure employee performance.</li>
-                          </ul>
+                            <h3>2021</h3>
+                            <p>
+                                <img src="images/M2M.jpg" alt="MyMathews Educare Logo" class="timeline-logo">
+                                <strong>Data Analyst Intern</strong> at MyMathews Educare Pvt Ltd
+                            </p>
+                            <ul>
+                                <li>Prepared advanced dashboards and Excel reports (e.g., HR, Financial, Payroll).</li>
+                                <li>Automated spreadsheets using Excel VBA for improved data entry efficiency.</li>
+                                <li>Conducted statistical analysis to measure employee performance.</li>
+                            </ul>
                         </div>
-                      </div>
+                    </div>
                 </div>
-<!-- experience -->
-
-<!-- education -->
+                <!-- experience -->
+                <!-- education -->
                 <div class="tab-contents" id="education">
                     <ul>
                         <li class="timeline-event">
-                          <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">2018 - 2020</h3>
-                          <p>
-                            <img src="images/CMS_Logo.png" alt="CMS College Logo" class="timeline-logo">
-                            <strong style="font-weight: bold;">Master of Commerce (M.Com), Finance and Taxation</strong><br>
-                            <span style="font-weight: bold;">Institution:</span> CMS College, Kottayam (Mahatma Gandhi University, Kottayam)<br>
-                            <span style="font-weight: bold;">SGPA:</span> 2.67 <span style="font-weight: bold;">- July 2018 - March 2020</span>
-                          </p>
-                          <ul>
-                            <li>Member of College Cricket Team which won the University Championship for 2 consecutive years.</li>
-                            <li>Best Wicket Keeper in Kerala College Premier League (KCPL) for consecutive years 2019 and 2020.</li>
-                            <li>Represented MG University in South Zone Cricket Championship 2019 at Mysore.</li>
-                            <li>Officiated University Cricket Tournaments as Umpire, Scorer, Organizing Committee Member, etc.</li>
-                            <li>Represented MG University in All India Universities Softball Championship 2018 at Pune.</li>
-                          </ul>
+                            <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">2018 - 2020</h3>
+                            <p>
+                                <img src="images/CMS_Logo.png" alt="CMS College Logo" class="timeline-logo">
+                                <strong style="font-weight: bold;">Master of Commerce (M.Com), Finance and Taxation</strong><br>
+                                <span style="font-weight: bold;">Institution:</span> CMS College, Kottayam (Mahatma Gandhi University, Kottayam)<br>
+                                <span style="font-weight: bold;">SGPA:</span> 2.67 <span style="font-weight: bold;">- July 2018 - March 2020</span>
+                            </p>
+                            <ul>
+                                <li>Member of College Cricket Team which won the University Championship for 2 consecutive years.</li>
+                                <li>Best Wicket Keeper in Kerala College Premier League (KCPL) for consecutive years 2019 and 2020.</li>
+                                <li>Represented MG University in South Zone Cricket Championship 2019 at Mysore.</li>
+                                <li>Officiated University Cricket Tournaments as Umpire, Scorer, Organizing Committee Member, etc.</li>
+                                <li>Represented MG University in All India Universities Softball Championship 2018 at Pune.</li>
+                            </ul>
                         </li>
-                        
                         <li class="timeline-event">
-                          <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">2015 - 2018</h3>
-                          <p>
-                            <img src="images/SHC_Logo.jpg" alt="Sacred Heart College Logo" class="timeline-logo">
-                            <strong style="font-weight: bold;">Bachelor of Commerce (B.Com), Travel and Tourism</strong><br>
-                            <span style="font-weight: bold;">Institution:</span> Sacred Heart College, Cochin (Mahatma Gandhi University, Kottayam)<br>
-                            <span style="font-weight: bold;">CGPA:</span> 7.5 <span style="font-weight: bold;">- June 2015 - March 2028</span>
-                          </p>
-                          <ul>
-                            <li>Player at Kerala State Cricket Academy.</li>
-                            <li>Member of College Cricket Team which won the University Championship for 3 consecutive years.</li>
-                            <li>Represented MG University in All India Baseball Championship 2018.</li>
-                            <li>Officiated University Cricket Tournaments as Umpire, Scorer, Organizing Committee Member, etc.</li>
-                          </ul>
+                            <h3 style="border-bottom: 2px solid #f04c71; padding-bottom: 5px;">2015 - 2018</h3>
+                            <p>
+                                <img src="images/SHC_Logo.jpg" alt="Sacred Heart College Logo" class="timeline-logo">
+                                <strong style="font-weight: bold;">Bachelor of Commerce (B.Com), Travel and Tourism</strong><br>
+                                <span style="font-weight: bold;">Institution:</span> Sacred Heart College, Cochin (Mahatma Gandhi University, Kottayam)<br>
+                                <span style="font-weight: bold;">CGPA:</span> 7.5 <span style="font-weight: bold;">- June 2015 - March 2028</span>
+                            </p>
+                            <ul>
+                                <li>Player at Kerala State Cricket Academy.</li>
+                                <li>Member of College Cricket Team which won the University Championship for 3 consecutive years.</li>
+                                <li>Represented MG University in All India Baseball Championship 2018.</li>
+                                <li>Officiated University Cricket Tournaments as Umpire, Scorer, Organizing Committee Member, etc.</li>
+                            </ul>
                         </li>
-                      </ul>
-                      
+                    </ul>
                 </div>
+                <!-- education -->
             </div>
         </div>
     </div>
 </div>
-<!-- education -->
 <!-- ---------services---------------- -->
 <div id="services">
     <div class="container">
@@ -266,7 +262,7 @@
                 <img src="images\One+.jpg">
                 <div class="layer">
                     <h3>Social Media App</h3>
-                    <p>The app connects you yo the talented people around the world. Download it from play store.</p>
+                    <p>The app connects you to the talented people around the world. Download it from play store.</p>
                     <a href="#"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
@@ -274,7 +270,7 @@
                 <img src="images\One+.jpg">
                 <div class="layer">
                     <h3>Music App</h3>
-                    <p>The app connects you yo the talented people around the world. Download it from play store.</p>
+                    <p>The app connects you to the talented people around the world. Download it from play store.</p>
                     <a href="#"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
@@ -282,7 +278,7 @@
                 <img src="images\One+.jpg">
                 <div class="layer">
                     <h3>Online Shopping App</h3>
-                    <p>The app connects you yo the talented people around the world. Download it from play store.</p>
+                    <p>The app connects you to the talented people around the world. Download it from play store.</p>
                     <a href="#"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
@@ -307,46 +303,37 @@
                 <a href="images\Sahil S - Lead BI.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
-                <!-- <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form> -->
-
-              <form name="submit-to-google-sheet" id="contact-form">
-              <input type="text" name="Name" placeholder="Your Name" required>
-              <input type="email" name="Email" placeholder="Your Email" required>
-              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-
-              <!-- Hidden fields to auto-fill -->
-              <input type="hidden" name="Browser" id="browser">
-              <input type="hidden" name="OS" id="os">
-              <input type="hidden" name="UserAgent" id="userAgent">
-              <input type="hidden" name="ScreenResolution" id="screenRes">
-              <input type="hidden" name="ColorDepth" id="colorDepth">
-              <input type="hidden" name="DeviceMemory" id="deviceMemory">
-              <input type="hidden" name="CPUCores" id="cpuCores">
-              <input type="hidden" name="TouchSupport" id="touchSupport">
-              <input type="hidden" name="Language" id="language">
-              <input type="hidden" name="Timezone" id="timezone">
-              <input type="hidden" name="PageURL" id="pageURL">
-              <input type="hidden" name="Referrer" id="referrer">
-              <input type="hidden" name="CookiesEnabled" id="cookiesEnabled">
-              <input type="hidden" name="DoNotTrack" id="dnt">
-              <input type="hidden" name="OnlineStatus" id="onlineStatus">
-              <input type="hidden" name="Timestamp" id="timestamp">
-              <input type="hidden" name="BatteryLevel" id="batteryLevel">
-              <input type="hidden" name="Charging" id="charging">
-              <input type="hidden" name="ConnectionType" id="connectionType">
-              <input type="hidden" name="RTT" id="rtt">
-              <input type="hidden" name="IP" id="ip">
-              <input type="hidden" name="DeviceModel" id="deviceModel">
-              <input type="hidden" name="Latitude" id="latitude">
-              <input type="hidden" name="Longitude" id="longitude">
-
-              <button type="submit" class="btn btn2">Submit</button>
-            </form>
+                <form name="submit-to-google-sheet" id="contact-form">
+                  <input type="text" name="Name" placeholder="Your Name" required>
+                  <input type="email" name="Email" placeholder="Your Email" required>
+                  <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                  <!-- Hidden fields to auto-fill -->
+                  <input type="hidden" name="Browser" id="browser">
+                  <input type="hidden" name="OS" id="os">
+                  <input type="hidden" name="UserAgent" id="userAgent">
+                  <input type="hidden" name="ScreenResolution" id="screenRes">
+                  <input type="hidden" name="ColorDepth" id="colorDepth">
+                  <input type="hidden" name="DeviceMemory" id="deviceMemory">
+                  <input type="hidden" name="CPUCores" id="cpuCores">
+                  <input type="hidden" name="TouchSupport" id="touchSupport">
+                  <input type="hidden" name="Language" id="language">
+                  <input type="hidden" name="Timezone" id="timezone">
+                  <input type="hidden" name="PageURL" id="pageURL">
+                  <input type="hidden" name="Referrer" id="referrer">
+                  <input type="hidden" name="CookiesEnabled" id="cookiesEnabled">
+                  <input type="hidden" name="DoNotTrack" id="dnt">
+                  <input type="hidden" name="OnlineStatus" id="onlineStatus">
+                  <input type="hidden" name="Timestamp" id="timestamp">
+                  <input type="hidden" name="BatteryLevel" id="batteryLevel">
+                  <input type="hidden" name="Charging" id="charging">
+                  <input type="hidden" name="ConnectionType" id="connectionType">
+                  <input type="hidden" name="RTT" id="rtt">
+                  <input type="hidden" name="IP" id="ip">
+                  <input type="hidden" name="DeviceModel" id="deviceModel">
+                  <input type="hidden" name="Latitude" id="latitude">
+                  <input type="hidden" name="Longitude" id="longitude">
+                  <button type="submit" class="btn btn2">Submit</button>
+                </form>
                 <span id="msg"></span>
             </div>
         </div>
@@ -356,29 +343,23 @@
     </div>
 </div>
 
-
-
 <script>
-
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
-
     function opentab(tabname){
-        for(tablink of tablinks){
+        for(let tablink of tablinks){
             tablink.classList.remove("active-link");
         }
-        for(tabcontent of tabcontents){
+        for(let tabcontent of tabcontents){
             tabcontent.classList.remove("active-tab");
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
-
 </script>
 
 <script>
     var sidemeu = document.getElementById("sidemenu");
-
     function openmenu(){
         sidemeu.style.right = "0";
     }
@@ -406,39 +387,28 @@
         document.getElementById("dnt").value = navigator.doNotTrack || "Not Set";
         document.getElementById("onlineStatus").value = navigator.onLine ? "Online" : "Offline";
         document.getElementById("timestamp").value = new Date().toISOString();
-
-        // Try to get Device Model (UA or UA Hints)
         if (navigator.userAgentData) {
-            navigator.userAgentData.getHighEntropyValues(["platform", "model"])
-                .then(ua => {
-                    document.getElementById("deviceModel").value = ua.model || navigator.userAgent;
-                });
+            navigator.userAgentData.getHighEntropyValues(["platform", "model"]).then(ua => {
+                document.getElementById("deviceModel").value = ua.model || navigator.userAgent;
+            });
         } else {
             document.getElementById("deviceModel").value = navigator.userAgent;
         }
-
-        // Battery Info (async)
         if (navigator.getBattery) {
             navigator.getBattery().then(function(battery) {
                 document.getElementById("batteryLevel").value = (battery.level * 100) + "%";
                 document.getElementById("charging").value = battery.charging ? "Yes" : "No";
             });
         }
-
-        // Network Info
         if (navigator.connection) {
             document.getElementById("connectionType").value = navigator.connection.effectiveType || "Unknown";
             document.getElementById("rtt").value = navigator.connection.rtt || "N/A";
         }
-
-        // Public IP via API
         fetch("https://api.ipify.org?format=json")
           .then(response => response.json())
           .then(data => {
               document.getElementById("ip").value = data.ip;
           });
-
-        // Geolocation (needs user permission)
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
                 function(position) {
@@ -451,30 +421,29 @@
             );
         }
     }
-
-    // Run on page load
     window.onload = fillSystemInfo;
 </script>
 
 <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyUPV71Kdr6eCFlCypVs-38KHwD2AQstsnvqt46fxUDEX0LZRFSXhon09GtpxqPy8ZTUw/exec' // your Apps Script link
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyUPV71Kdr6eCFlCypVs-38KHwD2AQstsnvqt46fxUDEX0LZRFSXhon09GtpxqPy8ZTUw/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById("msg");
     form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      e.preventDefault();
+      // Add blur effect to the form while submitting
+      form.classList.add("blurred");
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
         .then(response => {
-            msg.innerHTML = "Message sent successfully"
+            msg.innerHTML = "Message sent successfully";
             setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
+                msg.innerHTML = "";
+                form.classList.remove("blurred");
+            },5000);
+            form.reset();
         })
-        .catch(error => console.error('Error!', error.message))
-    })
+        .catch(error => console.error('Error!', error.message));
+    });
 </script>
-
 
 </body>
 </html>
