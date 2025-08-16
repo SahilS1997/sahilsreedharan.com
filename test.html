@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chronological Timeline</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .timeline {
+      position: relative;
+      margin-left: 40px;
+      padding-left: 40px;
+      border-left: 2px solid #f04c71;
+    }
+
+    .timeline-event {
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .timeline-event::before {
+      content: '';
+      position: absolute;
+      left: -10px;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background: #f04c71;
+      border-radius: 50%;
+      border: 2px solid white;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .timeline-event h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #f04c71;
+    }
+
+    .timeline-event p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .timeline-event img {
+      height: 30px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="timeline">
+    <div class="timeline-event">
+      <h3>2024 - Present</h3>
+      <p>
+        <img src="vizlake_logo.png" alt="Vizlake Analytics Logo">
+        <strong>Lead Business Intelligence Developer</strong> at Vizlake Analytics
+      </p>
+      <ul>
+        <li>Responsible for designing, developing, and maintaining advanced BI solutions for clients across industries, including amusement parks, financial services, and manufacturing.</li>
+        <li>Expertise in Power BI, SQL, Azure Data Factory, and Microsoft Fabric to deliver scalable analytics solutions.</li>
+      </ul>
+    </div>
+
+    <div class="timeline-event">
+      <h3>2023 - 2024</h3>
+      <p>
+        <img src="vizlake_logo.png" alt="Vizlake Analytics Logo">
+        <strong>Senior Business Intelligence Developer</strong> at Vizlake Analytics
+      </p>
+      <ul>
+        <li>Developed interactive dashboards and reports using Power BI.</li>
+        <li>Automated tasks using Python, Power Automate, and Excel VBA for efficient data handling.</li>
+        <li>Designed and maintained data pipelines using Azure Data Factory and Synapse Analytics.</li>
+      </ul>
+    </div>
+
+    <div class="timeline-event">
+      <h3>2021 - 2023</h3>
+      <p>
+        <img src="vizlake_logo.png" alt="Vizlake Analytics Logo">
+        <strong>Business Intelligence Developer</strong> at Vizlake Analytics
+      </p>
+      <ul>
+        <li>Assisted in creating reports and dashboards while gaining expertise in BI tools like Power BI and SQL.</li>
+        <li>Learned data modeling and ETL processes under senior guidance.</li>
+      </ul>
+    </div>
+
+    <div class="timeline-event">
+      <h3>2021</h3>
+      <p>
+        <img src="mymathews_logo.png" alt="MyMathews Educare Logo">
+        <strong>Data Analyst Intern</strong> at MyMathews Educare Pvt Ltd
+      </p>
+      <ul>
+        <li>Prepared advanced dashboards and Excel reports (e.g., HR, Financial, Payroll).</li>
+        <li>Automated spreadsheets using Excel VBA for improved data entry efficiency.</li>
+        <li>Conducted statistical analysis to measure employee performance.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>
