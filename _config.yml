@@ -1,9 +1,0 @@
-# _config.yml
-
-# Site settings
-title: "Sahil's Reedharan Website"
-description: "TestMyWebsiteSahil - A test website for Sahil"
-
-# URL settings
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://sahilsreedharan.com" # the base hostname & protocol for your site
