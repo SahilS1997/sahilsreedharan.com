@@ -7,6 +7,43 @@
     <title>Sahil Sreedharan</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <style>
+        /* Add loading overlay styles */
+        .loading-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+        .loading-spinner {
+            border: 6px solid #f3f3f3;
+            border-top: 6px solid #f04c71;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        /* Blur effect for form */
+        #contact-form.blur {
+            filter: blur(2px);
+            pointer-events: none;
+            user-select: none;
+        }
+        /* Container for position relative to overlay */
+        .contact-form-wrapper {
+            position: relative;
+        }
+    </style>
 </head>
 <body>
 <div id="header">
@@ -142,7 +179,7 @@
                             <strong>Lead Business Intelligence Developer</strong> at Vizlake Analytics
                           </p>
                           <ul>
-                            <li>Responsible for designing, developing, and maintaining advanced BI solutions for clients across industries, including amusement parks, financial services, and manufacturing.</li>
+                            <li>Responsible for designing, developing, and maintaining advanced BI solutions for clients across industries, including amusement parks, financial services, and manufactu[...]
                             <li>Expertise in Power BI, SQL, Azure Data Factory, and Microsoft Fabric to deliver scalable analytics solutions.</li>
                           </ul>
                         </div>
@@ -307,6 +344,7 @@
                 <a href="images\Sahil S - Lead BI.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
+                <div class="contact-form-wrapper">
                 <!-- <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="Email" placeholder="Your Email" required>
@@ -347,6 +385,10 @@
 
               <button type="submit" class="btn btn2">Submit</button>
             </form>
+            <div id="loading-overlay" class="loading-overlay" style="display:none;">
+                <div class="loading-spinner"></div>
+            </div>
+            </div>
                 <span id="msg"></span>
             </div>
         </div>
@@ -460,9 +502,14 @@
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyUPV71Kdr6eCFlCypVs-38KHwD2AQstsnvqt46fxUDEX0LZRFSXhon09GtpxqPy8ZTUw/exec' // your Apps Script link
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg")
+    const contactForm = document.getElementById("contact-form")
+    const loadingOverlay = document.getElementById("loading-overlay")
 
     form.addEventListener('submit', e => {
       e.preventDefault()
+      // Blur the form and show loader
+      contactForm.classList.add("blur")
+      loadingOverlay.style.display = "flex"
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => {
             msg.innerHTML = "Message sent successfully"
@@ -472,6 +519,11 @@
             form.reset()
         })
         .catch(error => console.error('Error!', error.message))
+        .finally(() => {
+            // Remove blur and loader
+            contactForm.classList.remove("blur")
+            loadingOverlay.style.display = "none"
+        })
     })
 </script>
 
