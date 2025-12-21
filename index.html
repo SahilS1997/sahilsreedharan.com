@@ -2,202 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enterprise Analytics | Fabric OLAT Framework</title>
-    
+    <title>Sahil Sreedharan | Data Analytics Specialist</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-
-    <style>
-        :root {
-            --primary: #0f172a; /* Deep Slate from your docs */
-            --accent: #2563eb;  /* Blue accent from your docs */
-            --bg: #080808;      /* Dark background from your style.css */
-            --card-bg: #111111;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --glass: rgba(255, 255, 255, 0.03);
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* --- STICKY MODERN NAV --- */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            height: 80px;
-            background: rgba(8, 8, 8, 0.8);
-            backdrop-filter: blur(15px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 8%;
-            z-index: 1000;
-        }
-
-        .logo { font-weight: 700; font-size: 1.4rem; letter-spacing: -0.5px; }
-        .logo span { color: #b54769; } /* Pink accent from your original style.css */
-
-        nav ul { display: flex; list-style: none; gap: 30px; }
-        nav a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; font-weight: 500; transition: 0.3s; }
-        nav a:hover { color: #b54769; }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            padding: 160px 8% 80px;
-            background: radial-gradient(circle at 0% 0%, #1e1b4b 0%, #080808 50%);
-        }
-
-        .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 20px; line-height: 1.1; }
-        .hero p { max-width: 650px; color: var(--text-muted); font-size: 1.2rem; margin-bottom: 30px; }
-
-        /* --- CONTENT GRID --- */
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 5% 100px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: 24px;
-            padding: 40px;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .card:hover { transform: translateY(-10px); border-color: #b54769; }
-
-        .badge {
-            display: inline-block;
-            padding: 6px 16px;
-            border-radius: 100px;
-            background: rgba(181, 71, 105, 0.1);
-            color: #b54769;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        h2 { font-size: 1.8rem; margin-bottom: 15px; }
-        
-        /* --- TECHNICAL BLOCKS --- */
-        .mermaid {
-            background: #ffffff; /* Mermaid renders best on white */
-            padding: 20px;
-            border-radius: 12px;
-            margin: 20px 0;
-        }
-
-        .code-block {
-            background: #000;
-            padding: 20px;
-            border-radius: 12px;
-            font-family: 'Consolas', monospace;
-            font-size: 0.85rem;
-            color: #10b981; /* Emerald green for code */
-            border-left: 4px solid #b54769;
-        }
-
-        footer {
-            padding: 60px 8%;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            text-align: center;
-            color: var(--text-muted);
-        }
-
-        @media (max-width: 768px) {
-            .container { grid-template-columns: 1fr; }
-            header { padding: 0 5%; }
-            nav { display: none; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <header>
-        <div class="logo">SAHIL<span>.ANALYTICS</span></div>
-        <nav>
-            <ul>
-                <li><a href="#architecture">Architecture</a></li>
-                <li><a href="#medallion">Medallion</a></li>
-                <li><a href="#devops">DevOps</a></li>
-                <li><a href="#operations">Monitoring</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <div class="badge">Advanced Analytics Portfolio</div>
-        <h1>Unified OLAT Framework</h1>
-        <p>A Microsoft-recommended architecture for Operational, Logical, and Analytical Transformations.</p>
-    </section>
-
+<div id="header">
     <div class="container">
-        <section id="architecture" class="card">
-            <div class="badge">Fabric Strategy</div>
-            <h2>Solution Architecture</h2>
-            <p>Separating ingestion, transformation, and consumption to ensure high performance and zero coupling.</p>
-            <div class="mermaid">
-                flowchart LR
-                Sources --> DataFactory --> OneLake --> Warehouse --> DirectLake --> PowerBI
+        <nav>
+            <div class="logo-area">
+                <img src="https://github.com/SahilS1997/sahilsreedharan.com/blob/main/SahilSreedharan_Logo.png?raw=true" class="logo">
+                <span>SAHIL<span>.FABRIC</span></span>
             </div>
-        </section>
-
-        <section id="medallion" class="card">
-            <div class="badge">Data Engineering</div>
-            <h2>The Medallion Journey</h2>
-            <p>Moving data from raw (Bronze) to analytics-ready (Gold) using Delta tables within OneLake.</p>
-            <div class="code-block">
-                # Sample Transformation Logic
-                df = spark.read.table("Bronze_Raw")
-                df_clean = df.filter("Value IS NOT NULL")
-                df_clean.write.saveAsTable("Silver_Clean")
-            </div>
-        </section>
-
-        <section id="devops" class="card">
-            <div class="badge">Governance</div>
-            <h2>DevOps & CI/CD</h2>
-            <p>Enforcing consistency through Azure DevOps integration and automated promotion of Fabric artifacts.</p>
-            <div class="mermaid">
-                flowchart LR
-                Dev --> Git --> Test --> Prod
-            </div>
-        </section>
-
-        <section id="operations" class="card">
-            <div class="badge">Stability</div>
-            <h2>Operations & Monitoring</h2>
-            <p>Continuous monitoring via the Fabric Capacity Metrics App to ensure strict SLA compliance.</p>
-            <ul>
-                <li style="margin-left: 20px;">Review pipeline run history</li>
-                <li style="margin-left: 20px;">Monitor warehouse concurrency</li>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
-        </section>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <div class="badge">Available for Projects</div>
+            <p>Data Analytics Specialist</p>
+            <h1>Hi, I'm <span>Sahil</span></h1>
+            <h2>From Kerala, <span>God's Own Country</span></h2>
+        </div>
     </div>
+</div>
 
-    <footer>
-        <p><strong>Status:</strong> Approved Target Architecture</p>
-        <p>© Sahil Sreedharan | Data Analytics Specialist</p>
-    </footer>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <div class="img-stack">
+                    <img src="images/AboutSahil.png" alt="Sahil" class="main-img">
+                </div>
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">My Journey</h1>
+                <p class="intro-p">
+                    Cricket taught me strategy; data taught me precision. I am a <strong>Certified Data Analytics Professional</strong> specializing in transforming raw numbers into high-impact business narratives.
+                </p>
 
-    <script>
-        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
-    </script>
+                <div class="expertise-grid">
+                    <div class="exp-item"><i class="fas fa-chart-line"></i> Power BI / Fabric</div>
+                    <div class="exp-item"><i class="fas fa-database"></i> SQL / Synapse</div>
+                    <div class="exp-item"><i class="fab fa-python"></i> Python / ETL</div>
+                    <div class="exp-item"><i class="fas fa-robot"></i> Power Automate</div>
+                </div>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <div class="skill-tags">
+                        <span>Power BI</span> <span>Microsoft Fabric</span> <span>T-SQL</span>
+                        <span>Python</span> <span>Azure Data Factory</span> <span>Power Apps</span>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
