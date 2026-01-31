@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sahil Sreedharan | Data Analytics Specialist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
 
@@ -15,7 +17,7 @@
     <div class="container">
         <nav>
             <div class="logo-area">
-                <img src="https://github.com/SahilS1997/sahilsreedharan.com/blob/main/SahilSreedharan_Logo.png?raw=true" class="logo">
+                <img src="SahilSreedharan_Logo.png" class="logo" alt="Sahil Logo">
                 <span>SAHIL<span>.FABRIC</span></span>
             </div>
             <ul id="sidemenu">
@@ -42,7 +44,7 @@
         <div class="row">
             <div class="about-col-1">
                 <div class="img-stack">
-                    <img src="images/AboutSahil.png" alt="Sahil" class="main-img">
+                    <img src="AboutSahil.png" alt="Sahil" class="main-img" loading="lazy">
                 </div>
             </div>
             <div class="about-col-2">
@@ -70,10 +72,60 @@
                         <span>Python</span> <span>Azure Data Factory</span> <span>Power Apps</span>
                     </div>
                 </div>
+                
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Current</span><br>Data Analytics Specialist</li>
+                        <li><span>Experience</span><br>Power BI & Microsoft Fabric Development</li>
+                        <li><span>Focus</span><br>ETL Pipelines & Data Visualization</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Certification</span><br>Certified Data Analytics Professional</li>
+                        <li><span>Specialization</span><br>Business Intelligence & Data Engineering</li>
+                    </ul>
+                </div>
                 </div>
         </div>
     </div>
 </div>
+
+<script>
+    // Mobile menu functions
+    function openmenu() {
+        document.getElementById("sidemenu").style.right = "0";
+    }
+    
+    function closemenu() {
+        document.getElementById("sidemenu").style.right = "-200px";
+    }
+    
+    // Tab switching function
+    function opentab(tabname) {
+        const tablinks = document.getElementsByClassName("tab-links");
+        const tabcontents = document.getElementsByClassName("tab-contents");
+        
+        // Remove active classes
+        for (let i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active-link");
+        }
+        for (let i = 0; i < tabcontents.length; i++) {
+            tabcontents[i].classList.remove("active-tab");
+        }
+        
+        // Add active class to clicked tab and corresponding content
+        document.getElementById(tabname).classList.add("active-tab");
+        
+        // Find and activate the correct tab link
+        for (let i = 0; i < tablinks.length; i++) {
+            if (tablinks[i].getAttribute('onclick').includes(tabname)) {
+                tablinks[i].classList.add("active-link");
+            }
+        }
+    }
+</script>
 
 </body>
 </html>
