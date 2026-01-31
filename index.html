@@ -13,35 +13,6 @@
 </head>
 <body>
 
-<script>
-    // Mobile menu functions
-    function openmenu() {
-        document.getElementById("sidemenu").style.right = "0";
-    }
-    
-    function closemenu() {
-        document.getElementById("sidemenu").style.right = "-200px";
-    }
-    
-    // Tab switching function
-    function opentab(tabname) {
-        const tablinks = document.getElementsByClassName("tab-links");
-        const tabcontents = document.getElementsByClassName("tab-contents");
-        
-        // Remove active classes
-        for (let i = 0; i < tablinks.length; i++) {
-            tablinks[i].classList.remove("active-link");
-        }
-        for (let i = 0; i < tabcontents.length; i++) {
-            tabcontents[i].classList.remove("active-tab");
-        }
-        
-        // Add active class to clicked tab
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-</script>
-
 <div id="header">
     <div class="container">
         <nav>
@@ -120,6 +91,41 @@
         </div>
     </div>
 </div>
+
+<script>
+    // Mobile menu functions
+    function openmenu() {
+        document.getElementById("sidemenu").style.right = "0";
+    }
+    
+    function closemenu() {
+        document.getElementById("sidemenu").style.right = "-200px";
+    }
+    
+    // Tab switching function
+    function opentab(tabname) {
+        const tablinks = document.getElementsByClassName("tab-links");
+        const tabcontents = document.getElementsByClassName("tab-contents");
+        
+        // Remove active classes
+        for (let i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active-link");
+        }
+        for (let i = 0; i < tabcontents.length; i++) {
+            tabcontents[i].classList.remove("active-tab");
+        }
+        
+        // Add active class to clicked tab and corresponding content
+        document.getElementById(tabname).classList.add("active-tab");
+        
+        // Find and activate the correct tab link
+        for (let i = 0; i < tablinks.length; i++) {
+            if (tablinks[i].getAttribute('onclick').includes(tabname)) {
+                tablinks[i].classList.add("active-link");
+            }
+        }
+    }
+</script>
 
 </body>
 </html>
