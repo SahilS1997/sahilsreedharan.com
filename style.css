@@ -14,9 +14,18 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--bg-dark);
     color: var(--text-main);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .container {
@@ -145,6 +154,32 @@ nav {
 
 .tab-links.active-link::after { width: 80%; }
 
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+.tab-contents ul {
+    list-style: none;
+}
+
+.tab-contents ul li {
+    margin: 15px 0;
+    font-size: 15px;
+    color: var(--text-muted);
+}
+
+.tab-contents ul li span {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
 .skill-tags span {
     display: inline-block;
     background: var(--primary-color);
@@ -167,4 +202,82 @@ nav {
 .services-list div:hover {
     background: var(--primary-color);
     transform: translateY(-10px);
+}
+
+/* --- Mobile Menu --- */
+nav .fas {
+    display: none;
+}
+
+/* --- Responsive Design --- */
+@media only screen and (max-width: 768px) {
+    nav .fas {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    
+    nav ul {
+        background: var(--primary-color);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    
+    nav ul .fas {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    
+    .header-text {
+        margin-top: 30%;
+        font-size: 20px;
+    }
+    
+    .header-text h1 {
+        font-size: 40px;
+    }
+    
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+    
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+    
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-links {
+        font-size: 16px;
+        margin-right: 30px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .header-text h1 {
+        font-size: 30px;
+    }
+    
+    .logo-area span {
+        font-size: 1rem;
+    }
+    
+    .container {
+        padding: 10px 5%;
+    }
 }
